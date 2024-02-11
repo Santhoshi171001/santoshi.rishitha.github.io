@@ -258,7 +258,7 @@ iris_plot</code></pre>
 <hr>
 <p>As a first step, I convert ‘Tondu’ into a proper categorical variable with the ‘factor’ function:</p>
 <pre><code>TEDS_2016$Tondu &lt;- factor(TEDS_2016$Tondu, levels = c(1,2,3,4,5, 6, 9), labels = c("Unification now", "Status quo, unif. in future", "Status quo, decide later", "Status quo forever", "Status quo, indep. in future", "Independence now", "No response")) </code></pre>
-<p>This also attaches the requite labels to the output levels of the variable. Now, MLR have alot of fancy theory behind them which you can check up on <a href="https://teams.microsoft.com/l/message/48:notes/1707682581793?context=%7B%22contextType%22%3A%22chat%22%7D">here</a>. One good thing about them is that we can treat explanatory ordinally structured variables as <a href="https://teams.microsoft.com/l/message/48:notes/1707682593687?context=%7B%22contextType%22%3A%22chat%22%7D">continuous</a>.</p>
+<p>This also attaches the requite labels to the output levels of the variable. Now, MLR have alot of fancy theory behind them which you can check up on <a href="https://teams.microsoft.com/l/message/48:notes/1707682581793?context=%7B%22contextType%22%3A%22chat%22%7D">here</a> and <a href="https://teams.microsoft.com/l/message/48:notes/1707683319092?context=%7B%22contextType%22%3A%22chat%22%7D">here</a>. One good thing about them is that we can treat explanatory ordinally structured variables as <a href="https://teams.microsoft.com/l/message/48:notes/1707682593687?context=%7B%22contextType%22%3A%22chat%22%7D">continuous</a>.</p>
 <p>So, proceeding ahead I make my MLR model with the ‘nnet’ library:</p>
 <pre><code>TEDDY &lt;- multinom(Tondu ~ Age + Edu + income, data = TEDS_2016,
                   Hess = TRUE, trace = FALSE)</code></pre>
@@ -272,7 +272,7 @@ iris_plot</code></pre>
 </div>
 </div>
 </div>
-<p>Next, in order to make these results more amenable to probabilistic interpretation, I use:</p>
+<p>Next, in order to make these results more amenable to probabilistic interpretation, I use the ‘predict’ function from the ‘car’ library:</p>
 <pre><code>predict(TEDDY, newdata = data.frame(Age = 1, Edu =1, income = 1), type = 'probs')</code></pre>
 <p>Which gives me the following result:</p>
 <p><img src="images/reg9.png" class="img-fluid"></p>
