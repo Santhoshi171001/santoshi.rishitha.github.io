@@ -228,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>read_stata("https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true")</code></pre>
 <p>Naming the dataset as ‘TEDS_2016’. To get a preliminary ‘hold’ of the data, I go ahead and clean the variable names using:</p>
 <pre><code>TEDS_2016 |&gt; janitor::clean_names()</code></pre>
-<p>Of course one of the first things to notice after uploading the data set to Visual Studio is that it is stored in both a space and a tab delimited format. I convert the data set to .csv format to deal with any problems this may be causing:</p>
+<p>I convert the data set to .csv format to deal with any problems delimtation may may be causing:</p>
 <pre><code>write.csv(TEDS_2016, file = "TED_2016.csv")
 TEDS_2016 &lt;- read_csv(file = 'TED_2016.csv')  </code></pre>
 <p>I then take a look at the entire variable (column) list. I notice immediately that some of the 1,690 observations are missing data points, ‘NA’. I figure my first step should be to deal with these before proceeding too far along. But also, some of the variables appear to be categorical or binary. A fact I can at least cursorily confirm by opening the visualization extension in RStudio’s ‘Environment’ pane. I also note that some of the columns might be combing information from other variables.</p>
