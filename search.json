@@ -1,18 +1,6 @@
 [
-  {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Project",
-    "section": "",
-    "text": "Project docs to go here. Check back soon!"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "I am a grad student at the University of Texas at Dallas. I am honored to be apart of the diverse and dedicated student body of such a pivotal institution. With some of Texas’s foremost instructors, I am continuously learning the skills needed to tackle the challenges facing dynamic organizations across the globe. I hope to use these assets to assist businesses and governments wherever they are with the ever changing needs of growth and development.\n\nI also have nearly a decade of experience working in the customer service sector. A rewarding career that emphasizes the invaluableness of teamwork, and what can be accomplished when group goals align with group gains. I have performed roles utilizing skills as varied as logistical coordination, management, and shipping accommodation. I am also a firm believer in the utility brought about by an inclusive workforce. The meshing of differing approaches to any task at hand is any institution’s ultimate resource.\n\nI am excited to continue expanding my knowledge base and skill set in order to achieve my professional goals. I look forward to the journey I will share with my fellow classmates in the near future and my co-workers in the longer one. Please feel free to contact me to connect, or provide me with notice of any opportunities you believe I am suitable for."
-  },
+  
+
   {
     "objectID": "assignment4.html",
     "href": "assignment4.html",
@@ -76,13 +64,7 @@
     "section": "",
     "text": "x=rnorm(100)\ny=rnorm(100)\nplot(x,y)\n\n\n\nplot(x,y, pch=20, col = \"firebrick\") # Scatterplot for two numeric variables by default\n\n\n\nplot(x,y, pch=20, col = \"steelblue\",xlab=\"this is the x-axis\",ylab=\"this is the y-axis\",main=\"Plot of X vs Y\") # Add labels\n\n\n\npdf(\"Figure01.pdf\") # Save as pdf, add a path or it will be stored on the project directory\nplot(x,y,pch=20, col=\"forestgreen\") # Try different colors?\ndev.off() # Close the file using the dev.off function\n\nquartz_off_screen \n                2 \n\nx=seq(1,10) # Same as x=c(1:10)\nx\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nx=1:10\nx\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nx=seq(-pi,pi,length=50)\ny=x"
   },
-  {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
-    "section": "",
-    "text": "Nuclear Energy - Policy Brief \nCost Evaluation in Education \nFactor Costs in Healthcare \nSummary of Clausing\nLabor Market Update - November 2023"
-  },
+  
   {
     "objectID": "Lab03.html",
     "href": "Lab03.html",
@@ -247,7 +229,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Tyler Merrill",
+    "title": "Santoshi Rishitha",
     "section": "",
     "text": "Welcome!\nThis domain serves as a repository of my work, including samples from my academic and professional portfolios. Please feel free to browse, or download any files for personal use.\n\nNotice: This is a grad student’s personal project silo. As such, it comes with no guarantees of any descriptor."
   },
